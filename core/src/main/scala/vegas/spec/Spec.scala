@@ -1010,7 +1010,7 @@ object Spec {
         case (a @ ((_): Array[Long] @unchecked)) => a.asJson
         case (a @ ((_): Array[Float] @unchecked)) => a.asJson
         case (a @ ((_): Array[Double] @unchecked)) => a.asJson
-        case (s @ ((_): Array[Any] @unchecked)) => s.toSeq.asJson(Encoder.encodeSeq(anyEncoder))
+        case (s @ ((_): Array[Any] @unchecked)) => s.asJson(Encoder.encodeIterable(anyEncoder, _.toIterable))
         case (s @ ((_): Seq[Any] @unchecked)) => s.asJson(Encoder.encodeSeq(anyEncoder))
         case (ma @ ((_): Map[String, Any] @unchecked)) => ma.asJson(Encoder.encodeMapLike(KeyEncoder.encodeKeyString, anyEncoder, implicitly))
     }));

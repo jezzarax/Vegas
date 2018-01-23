@@ -1,13 +1,6 @@
-# Contributing
+# This is a fork
 
-Contributions welcome! 
-
-* Submit contributions as pull requests. The PR should include a brief
-note describing the changes.
-
-* Any new functionality should include a unit test. Unit tests should 
-be written in FlatSpec style, with each clause being small and testing a 
-single thing.
+This is a for of [vegas-viz](https://github.com/vegas-viz/Vegas) that was fixed to run in the latest version of [Ammonite](http://ammonite.io). It takes some time to finalize the pull request, so this for is published as a separate repository. All credit goes to the authors of the original repository.
 
 #  Test setup and run
 

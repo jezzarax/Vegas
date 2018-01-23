@@ -4,6 +4,8 @@ import ReleaseTransformations._
 // Setting / Task Definitions
 // ---------
 
+useGpg := true
+
 lazy val vegaLiteVersion = settingKey[String]("The release version of vega-lite to build off")
 
 lazy val updateVegaDeps = taskKey[Unit]("Download and replace the vega-lite json schema and examples with the latest versions from their github repo")
@@ -68,7 +70,7 @@ lazy val circeVersion = "0.9.0"
 
 lazy val commonSettings = Seq(
   description := "The missing matplotlib for Scala and Spark",
-  organization := "org.vegas-viz",
+  organization := "im.lag",
   scalaVersion := "2.11.8",
   vegaLiteVersion := "1.2.0",
   scalacOptions += "-target:jvm-1.7",
@@ -87,11 +89,11 @@ lazy val commonSettings = Seq(
   },
   publishArtifact in Test := false,
   pomIncludeRepository := { _ => false },
-  sonatypeProfileName := "org.vegas-viz",
+  sonatypeProfileName := "im.lag",
   pomExtra := (
     <scm>
-      <url>git@github.com:vegas-viz/Vegas.git</url>
-      <connection>scm:git:git@github.com:vegas-viz/Vegas.git</connection>
+      <url>git@github.com:jezzarax/Vegas.git</url>
+      <connection>scm:git:git@github.com:jezzarax/Vegas.git</connection>
     </scm>
       <developers>
         <developer>
